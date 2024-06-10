@@ -1,0 +1,623 @@
+/* Stylesheet for the webpage */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: white;
+}
+
+/* ----------- Navigation ----------- */
+.navbar {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 30px;
+    opacity: 75%;
+}
+
+.navbar .logo {
+    color: #ffffff;
+}
+
+.logo a {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    list-style-type: none;
+}
+
+.nav-links li a {
+    font-weight: 300;
+    margin-right: 40px;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+/* ----------- Navigation Hover Effect ----------- */
+
+.nav-links li a:hover {
+    color: rgb(31, 121, 126);
+}
+
+/* Splash Screen Part */
+
+.intro {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    transition: 1s;
+}
+
+.logo-header {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+
+.intro-logo {
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+    font-size: large;
+}
+
+.intro-logo.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.intro-logo.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+    margin-right: auto; /* Change margin-right to auto to push it to the left */
+    margin-left: 70px; /* Add margin-left to create space from the left side */
+}
+
+.left-content {
+    text-align: left; /* Align the content to the left */
+}
+
+.left-content h3 {
+    font-size: 17px;
+    margin-bottom: 20px;
+    font-size: large;
+    font-family: 'Poppins', sans-serif;
+}
+
+.left-content p {
+    font-size: 15px;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    width: 400px;
+}
+
+.left-content .explore-btn {
+    padding: 8px 18px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    font-size: 13px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.left-content .explore-btn:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* -------- Info Section ------- */
+
+.info-section {
+    background-color: #f5f5f5; 
+    padding: 60px 20px; 
+    text-align: center; 
+}
+
+.info-content h2 {
+    font-size: 17px; 
+    margin-bottom: 20px; 
+    font-family: 'Poppins', sans-serif; 
+    color: #333; 
+}
+
+.info-content h3 {
+    font-size: 17px; 
+    margin-bottom: 20px; 
+    font-family: 'Poppins', sans-serif;
+    color: #555; 
+}
+
+.info-content p {
+    font-size: 15px; 
+    font-family: 'Poppins', sans-serif;
+    color: #666; 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+/* -------- Features Section ------- */
+
+.features-section {
+    background-color: #fff; 
+    padding: 60px 20px; 
+    text-align: center; 
+}
+
+.features-content {
+    max-width: 1200px; /* Adjusted to give more space for the features */
+    margin: 0 auto;
+}
+
+.features-content h2 {
+    font-size: 24px; /* Increased font size for better emphasis */
+    margin-bottom: 40px; /* Increased margin for better spacing */
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    text-transform: uppercase; /* Added text-transform for a stylish look */
+}
+
+.feature-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: #f9f9f9; /* Light background for feature boxes */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: calc(25% - 20px); /* Four features in a row with spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.feature i {
+    font-size: 22px;
+    color: #1f797e; /* Icon color */
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.feature p {
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    color: #666;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .feature {
+        width: calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .feature {
+        width: calc(100% - 20px); 
+    }
+}
+
+
+/* Dish Section */
+.dishes-section {
+    background-color: #000000; 
+    padding: 60px 20px; 
+    text-align: center; 
+}
+
+.dishes-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dish-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center; /* Center align the dishes vertically */
+}
+
+.dish {
+    background: transparent; /* Transparent background for dish boxes */
+    padding: 20px;
+    margin: 20px; /* Adjusted margin for spacing */
+    width: calc(33.33% - 40px); /* Three dishes in a row with spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dishes-section h3 {
+    color: #fff;
+}
+
+.dish:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dish-image {
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #fff; /* White border around the circular image */
+    border-radius: 50%; /* Shape the dish image as a circle */
+    width: 180px; /* Adjusted width for circular image */
+    height: 180px; /* Adjusted height for circular image */
+    margin: 0 auto 10px; /* Center the image vertically */
+    margin-bottom: 10px;
+}
+
+.dish-info {
+    margin-top: 10px;
+    text-align: center; /* Center align the information */
+}
+
+.dish-info h3 {
+    padding-top: 14px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+}
+
+.dish-info p {
+    margin-top: 10px;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+}
+
+.price {
+    padding-top: 10px;
+    display: block;
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .dish {
+        width: calc(50% - 40px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .dish {
+        width: calc(100% - 40px); 
+    }
+}
+
+
+/* ----------- Main Content ----------- */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.contact-map-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the start (top) */
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.map-container {
+    width: 50%; /* Adjusted width to occupy half of the space */
+    margin-right: 20px; /* Added margin between map and contact info */
+}
+
+.map-container iframe{
+    width: 570px;
+    height: 320px;
+    margin-left: 200px;
+}
+
+.contact-info {
+    width: 40%; /* Adjusted width to occupy 40% of the space */
+    font-size: 14px;
+    margin-top: 390px;
+}
+
+
+/* -------- Contact Page --------- */
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.contact h2 {
+    margin-top: -50px;
+    font-size: 40px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form {
+    width: 100%;
+    max-width: 700px;
+    background-color: #ffffff00;
+    padding: 10px;
+    background: transparent;
+    border: 2px solid #2A5470;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    font-weight: 300;
+}
+
+.form:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 8px 16px rgba(0, 178, 243, 0.2); 
+}
+
+.input-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.items {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.error {
+    border-color: #8f0000;
+}
+
+textarea.items {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.field .error-txt {
+    font-size: 14.5px;
+    color: #8f0000;
+    text-align: left;
+    margin: -5px - 10px;
+    display: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #004e5e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #050505; 
+}
+
+.items::placeholder {
+    color: #999;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    margin-top: 200px;
+    text-align: center;
+    padding: 20px 0;
+    background: #efeded;
+    color: #000000;
+    position: relative;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: #000000;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #000000;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+    margin-right: auto; /* Change margin-right to auto to push it to the left */
+    margin-left: 70px; /* Add margin-left to create space from the left side */
+}
+
+.left-content {
+    text-align: left; /* Align the content to the left */
+}
+
+.left-content h3 {
+    font-size: 17px;
+    margin-bottom: 20px;
+    font-size: large;
+    font-family: 'Poppins', sans-serif;
+}
+
+.left-content p {
+    font-size: 15px;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    width: 400px;
+}
+
+.left-content .explore-btn {
+    padding: 8px 18px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    font-size: 13px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.left-content .explore-btn:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* -------- Info Section ------- */
+
+/* Hero Section */
+.hero-section-1 {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content-1 {
+    max-width: 800px;
+    padding: 20px;
+    margin-right: auto; /* Change margin-right to auto to push it to the left */
+    margin-left: 70px; /* Add margin-left to create space from the left side */
+}
+
+.left-content-1 {
+    text-align: right; /* Align the content to the left */
+}
+
+.left-content-1 h3 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    width: 400px;
+}
+
+.left-content-1 p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    width: 400px;
+}
+
+.contact-map-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.map-container {
+    position: absolute;
+    width: 50%;
+    margin-left: -500px;
+    margin-top: 50px;
+}
+
+.contact-info {
+    width: 50%; /* Adjusted width to occupy 50% of the space */
+    font-size: 14px;
+    margin-top: 100px;
+}
+
+.left-content-1 {
+    position: relative;
+    margin-left: 400px;
+    padding-bottom: -500px;
+}
+
